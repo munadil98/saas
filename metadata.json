@@ -1,0 +1,6 @@
+{
+  "name": "PDF and Image Tools SaaS",
+  "description": "A professional full-featured SaaS platform offering PDF and image tools (Merge, Split, Compress, Convert) with user authentication, usage tracking, subscription plans, and an admin panel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

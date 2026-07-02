@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500;1,700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Global resets for the high-density technical console aesthetic */
+html, body {
+  background-color: #E4E3E0 !important;
+  color: #141414 !important;
+  font-family: var(--font-sans);
+}
+
+/* Force crisp, sharp, non-bubbly widgets */
+*, ::after, ::before {
+  border-color: #141414;
+}
+
+/* Custom visual class definitions matching the design spec */
+.theme-bg {
+  background-color: #E4E3E0 !important;
+}
+
+.theme-text {
+  color: #141414 !important;
+}
+
+.theme-border {
+  border: 1px solid #141414 !important;
+}
+
+.theme-border-b {
+  border-bottom: 1px solid #141414 !important;
+}
+
+.theme-border-r {
+  border-right: 1px solid #141414 !important;
+}
+
+.theme-panel {
+  background-color: #DEDCD7 !important;
+  border: 1px solid #141414 !important;
+}
+
+.theme-card {
+  background-color: rgba(255, 255, 255, 0.45) !important;
+  border: 1px solid #141414 !important;
+}
+
+.theme-button-primary {
+  background-color: #141414 !important;
+  color: #E4E3E0 !important;
+  border: 1px solid #141414 !important;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 150ms ease;
+}
+.theme-button-primary:hover {
+  background-color: #E4E3E0 !important;
+  color: #141414 !important;
+}
+
+.theme-button-secondary {
+  background-color: transparent !important;
+  color: #141414 !important;
+  border: 1px solid #141414 !important;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 150ms ease;
+}
+.theme-button-secondary:hover {
+  background-color: #141414 !important;
+  color: #E4E3E0 !important;
+}
+
+.theme-input {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  color: #141414 !important;
+  border: 1px solid #141414 !important;
+  border-radius: 0px !important;
+  font-family: var(--font-mono);
+}
+.theme-input:focus {
+  outline: none !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 0 0 2px rgba(20, 20, 20, 0.1) !important;
+}
+
+/* CSS rule overrides to safely format the entire app across all screens */
+div, header, footer, nav, button, input, select, textarea, section, table, tr, td, th {
+  border-radius: 0px !important; /* Force strict sharp rectangular grids */
+  box-shadow: none !important; /* Remove soft rounded shadows */
+}
+
+/* Force specific colors & layout parameters */
+.bg-white {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.bg-gray-50, .bg-slate-50, .bg-zinc-50, .bg-indigo-50\/45, .bg-indigo-50\/25, .bg-indigo-50\/60, .bg-indigo-50\/50 {
+  background-color: #E4E3E0 !important;
+}
+
+.bg-gray-100, .bg-gray-150, .bg-gray-200 {
+  background-color: #DEDCD7 !important;
+}
+
+.bg-gray-900, .bg-gray-950, .bg-indigo-950\/40, .bg-slate-900 {
+  background-color: #141414 !important;
+}
+
+.text-white, .text-indigo-50 {
+  color: #E4E3E0 !important;
+}
+
+.text-gray-900, .text-gray-800, .text-gray-700, .text-gray-600, .text-indigo-600, .text-indigo-700 {
+  color: #141414 !important;
+}
+
+.text-gray-400, .text-gray-500, .text-slate-400 {
+  color: #141414 !important;
+  opacity: 0.65;
+}
+
+.border, .border-b, .border-t, .border-r, .border-l, .border-gray-100, .border-gray-150, .border-gray-200, .border-gray-300, .border-indigo-100, .border-indigo-200 {
+  border-color: #141414 !important;
+}
+
+/* Table styling matching design */
+table {
+  border-collapse: collapse !important;
+}
+
+tr {
+  border-bottom: 1px solid #141414 !important;
+}
+
+tr:hover {
+  background-color: #141414 !important;
+  color: #E4E3E0 !important;
+}
+
+tr:hover td, tr:hover td span, tr:hover td p, tr:hover td svg, tr:hover td button {
+  color: #E4E3E0 !important;
+}
+
+/* Compact custom technical scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #E4E3E0;
+  border-left: 1px solid #141414;
+}
+::-webkit-scrollbar-thumb {
+  background: #141414;
+}
